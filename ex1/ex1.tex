@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+
+
+\begin{document}
+	\section{}
+	\begin{equation*}
+		u(0 + \tau) = u(0) + \tau u'(0) + \cfrac{\tau^2}{2!}u''(0) + O(\tau^3)
+	\end{equation*}
+
+	\begin{equation*}
+		u''(t) + {\omega}^2u(t) = 0
+		\Rightarrow
+		u''(0) + {\omega}^2u(0) = 0
+		\Rightarrow
+		u''(0) =  -{\omega}^2u(0)
+	\end{equation*}
+
+	\begin{equation*}
+		u'(0) = 0
+	\end{equation*}
+
+	\begin{equation*}
+		u(0 + \tau) = u(0) - \cfrac{\tau^2}{2!}{\omega}^2u(0)
+	\end{equation*}
+
+	\section{}
+
+	\begin{equation*}
+		\cfrac{y^{1}  - y^{-1}}{2\tau} = V
+		\Rightarrow
+		y^{-1} = y^{1} - 2V\tau
+	\end{equation*}
+
+	\begin{equation*}
+		y^{n + 1} = 2y^{n} - \tau^2\omega^2y^{n} - y^{n - 1}
+	\end{equation*}
+
+	\begin{equation*}
+		n = 0 \Rightarrow y^{1} = 2y^{0} - \tau^2\omega^2y^{0} - y^{-1}
+		\Rightarrow
+		2y^{1} = U(2 - \tau^2\omega^2) + 2V\tau
+	\end{equation*}
+
+	\section{}
+	\begin{equation*}
+		u(0 + \tau) = u(0) + \tau u'(0) + \cfrac{\tau^2}{2!}u''(0) + O(\tau^3)
+	\end{equation*}
+
+	\begin{equation*}
+		y^{1} = U + \tau V - \cfrac{\tau^2\omega^2}{2!}U + O(\tau^3)
+	\end{equation*}
+\end{document}
