@@ -1,0 +1,32 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{amsmath}
+
+\addtolength{\hoffset}{-1cm}
+\addtolength{\voffset}{-5cm}
+\addtolength{\textheight}{5cm}
+\addtolength{\textwidth}{2cm}
+
+\title{Actions}
+\author{ }
+\date{ }
+
+\begin{document}
+
+\maketitle
+
+\begin{multline*}
+	E = \cfrac{u_{\overline{t}t}^n}{u^{''}(t_n)} = 
+	\cfrac{u(t_n + \tau) - 2u(t_n) + u(t_n - \tau)}{\tau^2 u^{''}(t_n)} = 
+	\left[u(t) = e^{i\omega t} \right] = \\
+	= \cfrac{e^{i\omega (t_n + \tau)} - 2e^{i\omega t_n} + e^{i\omega (t_n - \tau)}}{-\omega^2\tau^2e^{i\omega t_n}}
+	= \cfrac{e^{i\omega\tau} - 2 + e^{-i\omega\tau}}{-\omega^2\tau^2} = 
+	\cfrac{\cos{\omega\tau} + i\sin{\omega\tau} - 2 + \cos{\omega\tau} - i\sin{\omega\tau}}{-\omega^2\tau^2} =
+	\\
+	= -\cfrac{2(\cos{\omega\tau} - 1)}{\omega^2\tau^2} = \cfrac{4\sin^2{\frac{\omega\tau}{2}}}{\omega^2\tau^2}
+	= \left(\cfrac{2}{\omega\tau}\right)^2\sin^2{\cfrac{\omega\tau}{2}}
+\end{multline*}
+
+\end{document}
