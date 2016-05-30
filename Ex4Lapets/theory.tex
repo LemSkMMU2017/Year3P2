@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[left=30mm, top=15mm, right=30mm, bottom=25mm, nohead, nofoot]{geometry}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\title{Numerical Python -- ODE -- Exercise 4}
+\date{}
+\author{}
+ 
+\begin{document}
+
+\maketitle
+
+Имуются точное и приближенное решения $I\cos(\omega t)$ и $I\cos(\tilde{\omega}t)$. В качестве погрешности фазы будем понимать задержку по времени пика I точного решения и соответствующего пика приближенного решения после m периодов колебаний. Конкретнее, будем рассматривать локальные максимумы.
+
+\section{Аналитическое доказательство}
+Пики для аналитического и численного решения задаются формулами
+$$t_m=\cfrac{2\pi}{\omega}m$$
+и
+$$\tilde{t}_m=\cfrac{2\pi}{\tilde{\omega}}m.$$
+
+Погрешность фазы получается равной
+$$\varepsilon_m = t_m - \tilde{t}_m=(\cfrac{2\pi}{\omega} - \cfrac{2\pi}{\tilde{\omega}})m,$$
+то есть является линейной функцией относительно $m$.
+
+\section{Численное доказательство}
+Предположим, что погрешность фазы $\varepsilon_m$ после $m$ периодов колебаний представима в виде
+\begin{equation}\label{eq:assumption}
+\varepsilon_m = k m.
+\end{equation}
+Тогда, в силу того, что численное решение представляется сеточной функцией, представление (\ref{eq:assumption}) верно с точностью до $\tau$, где $\tau$ -- величина шага. То есть
+\begin{equation}
+k m - \tau \leq \varepsilon_m \leq k m + \tau.
+\end{equation}
+
+Проведём серию вычислений $\cfrac{e_m}{m}$ для различных $m$. Если предположение верно, то
+$$\cfrac{e_m}{m} \approx k$$
+с точностью до $\cfrac{\tau}{m}$.
+
+
+\end{document}
